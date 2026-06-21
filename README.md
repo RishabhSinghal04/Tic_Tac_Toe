@@ -2,6 +2,8 @@
 
 A configurable, AI-powered Tic Tac Toe web app. Play against another human or against an AI opponent, on a 3x3, 4x4, or 5x5 board, with two difficulty levels. Built with a Flask backend, a vanilla JavaScript frontend, and Tailwind CSS for styling.
 
+![](./screenshots/screenshot_1.jpeg)
+
 
 ## Features
 
@@ -15,6 +17,8 @@ A configurable, AI-powered Tic Tac Toe web app. Play against another human or ag
 - **In-page dialogs**: Custom-styled confirmation dialogs (not browser-native `confirm()`) for resetting the game, changing the board size mid-game, and announcing a win/draw with a "New Game" option.
 - **Turn-locking**: The board is disabled while the AI is "thinking" (waiting on a backend response) and after a game ends, preventing out-of-turn or post-game clicks.
 - **Responsive layout**: Built with Tailwind CSS, with a background image and a responsive control panel that switches between a row and column layout depending on viewport width.
+
+![](./screenshots/screenshot_3.jpeg)
 
 
 ## Tech Stack
@@ -152,3 +156,6 @@ The frontend is deliberately split into small, single-purpose files rather than 
 This separation keeps each file testable and replaceable independently — for example, `dialog.js` could be reused in an unrelated project with no changes.
 
 On the backend, `logic/check_winner.py`, `logic/minimax.py`, and `logic/ai_move.py` are organized as a Python package (`logic/`) so their imports remain consistent and importable from `app.py` without path hacks.
+
+![](./screenshots/screenshot_2.jpeg)
+![](./screenshots/screenshot_4.jpeg)
