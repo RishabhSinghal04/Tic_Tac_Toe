@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+venv/
+.venv/
+*.egg-info/
+*.egg
+
+# Flask
+instance/
+.webassets-cache
+*.db
+*.sqlite3
+
+# Environment variables
+.env
+.flaskenv
+
+# Node / Tailwind
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log
+package-lock.json.bak
+
+# Tailwind PostCSS output
+static/styles/output.css
+
+# Editor / OS
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

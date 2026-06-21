@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <meta name="description"
+        content="Play Tic Tac Toe online against an AI opponent or a friend. Choose between 3x3, 4x4, and 5x5 boards, with adjustable AI difficulty.">
+    <meta name="color-scheme" content="light">
+    <link rel="stylesheet" href="/static/styles/output.css">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+    <link rel="icon" type="image/png" href="/static/assets/img/tic-tac-toe.png">
+</head>
+
+<body class="min-h-screen min-w-screen bg-[url('/static/assets/img/background.jpg')] 
+                bg-cover bg-center bg-no-repeat">
+    <div class="flex flex-col-reverse gap-4 md:flex-row min-h-screen items-center justify-center">
+        <!-- Buttons -->
+        <div class="gap-2 p-2
+            flex flex-wrap justify-center md:flex-col md:items-center md:justify-center">
+            <button id="button.1.player" class="btn-primary">
+                <!-- AI or Human, display any one option at a time -->
+            </button>
+            <button id="button.2.difficulty" class="btn-primary">
+                <!-- Medium or Hard, display any one option at a time -->
+            </button>
+            <button id="button.3.X" class="btn-primary">
+                <div class="flex flex-col items-center">
+                    <span>X</span> <!-- permanent symbol -->
+                    <span id="symbol-label">AI</span> <!-- dynamic label -->
+                </div>
+            </button>
+            <button id="button.4.board.size" class="btn-primary">
+                <!-- 3x3 4x4 5x5, display any one option at a time -->
+            </button>
+            <button id="button.5.reset" class="btn-primary">
+                Reset
+            </button>
+        </div>
+
+        <!-- Board -->
+        <div class="mx-auto p-2 flex justify-center md:mx-2 md:my-2 relative">
+            <div id="board" class="grid border-4 border-black">
+            </div>
+            <div id="dialog.message" class="hidden absolute inset-0 flex-col items-center justify-center gap-4
+                    text-white bg-black/50">
+                <p id="dialog.message.text" class="text-4xl font-bold text-center"></p>
+                <div class="flex gap-4">
+                    <button id="dialog.yes" class="btn-primary"></button>
+                    <button id="dialog.no" class="btn-primary"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/storage.js"></script>
+    <script src="/static/js/gameLogic.js"></script>
+    <script src="/static/js/aiClient.js"></script>
+    <script src="/static/js/dialog.js"></script>
+    <script src="/static/js/board.js"></script>
+    <script src="/static/js/cellEvents.js"></script>
+    <script src="/static/js/controls.js"></script>
+
+</body>
+
+</html>

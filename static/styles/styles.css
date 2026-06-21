@@ -1,0 +1,22 @@
+@config "./tailwind.config.js";
+@import "tailwindcss";
+
+:root {
+    color-scheme: light;
+}
+
+@layer components {
+    .btn-primary {
+        @apply w-20 md:w-24 lg:w-28 aspect-square rounded-full flex items-center justify-center bg-white/10 backdrop-opacity-10 border-white/30 shadow-lg hover:bg-white/40 cursor-pointer text-white text-sm md:text-lg lg:text-2xl font-semibold uppercase;
+    }
+}
+
+@layer components {
+    .cell-base {
+        @apply flex items-center justify-center font-bold border-2 border-black bg-white opacity-40 cursor-pointer select-none hover:bg-gray-400;
+    }
+
+    .cell-filled {
+        @apply bg-transparent text-white opacity-55 cursor-default;
+    }
+}

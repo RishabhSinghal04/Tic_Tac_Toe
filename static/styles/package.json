@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.3.1",
+    "autoprefixer": "^10.5.0",
+    "postcss": "^8.5.15",
+    "tailwindcss": "^4.3.1"
+  },
+  "name": "postcss-tailwind-setup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "postcss.config.js",
+  "devDependencies": {
+    "postcss-cli": "^11.0.1",
+    "vite": "^8.0.16"
+  },
+  "scripts": {
+    "build-css": "postcss styles.css -o output.css",
+    "watch-css": "postcss styles.css -o output.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
