@@ -56,17 +56,19 @@ async function playAiTurnIfNeeded(board) {
     if (!aiIsOpponent || currentSymbol !== aiSymbol) return;
 
     aiThinking = true;
+    let position;
     try {
         const grid = getBoardState(board);
-        const position = await requestAiMove(grid, aiSymbol, difficulty);
-        const aiCell = board.querySelectorAll(".cell-base")[position - 1];
-        if (aiCell instanceof HTMLElement) {
-            placeSymbol(aiCell, aiSymbol);
-            currentSymbol = currentSymbol === "X" ? "O" : "X";
-            await checkGameEnd(board, aiSymbol);
-        }
+        position = await requestAiMove(grid, aiSymbol, difficulty);
     } finally {
         aiThinking = false;
+    }
+
+    const aiCell = board.querySelectorAll(".cell-base")[position - 1];
+    if (aiCell instanceof HTMLElement) {
+        placeSymbol(aiCell, aiSymbol);
+        currentSymbol = currentSymbol === "X" ? "O" : "X";
+        await checkGameEnd(board, aiSymbol);
     }
 }
 
