@@ -26,7 +26,7 @@ yarn-error.log
 package-lock.json.bak
 
 # Tailwind PostCSS output
-static/styles/output.css
+# static/styles/output.css
 
 # Editor / OS
 .vscode/
