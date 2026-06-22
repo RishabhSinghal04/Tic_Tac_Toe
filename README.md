@@ -1,6 +1,7 @@
 # Tic Tac Toe
 
 A configurable, AI-powered Tic Tac Toe web app. Play against another human or against an AI opponent, on a 3x3, 4x4, or 5x5 board, with two difficulty levels. Built with a Flask backend, a vanilla JavaScript frontend, and Tailwind CSS for styling.
+<span style="font-size: 1em; vertical-align: middle;"> Website: *https://tic-tac-toe-90u6.onrender.com/* </span>
 
 ![](./screenshots/screenshot_1.jpeg)
 
