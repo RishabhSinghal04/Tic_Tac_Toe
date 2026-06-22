@@ -142,6 +142,12 @@ Response body:
 
 `position` is a 1-indexed cell number, counted left-to-right, top-to-bottom (e.g., on a 3x3 board, position `5` is the center cell).
 
+
+## Acknowledgments
+
+AI tools, including Claude (Sonnet 4.6) by Anthropic and Microsoft Copilot, were used selectively during development for debugging assistance and documentation support.
+
+
 ## Architecture Notes
 
 The frontend is deliberately split into small, single-purpose files rather than one large script:
@@ -157,6 +163,7 @@ The frontend is deliberately split into small, single-purpose files rather than 
 This separation keeps each file testable and replaceable independently — for example, `dialog.js` could be reused in an unrelated project with no changes.
 
 On the backend, `logic/check_winner.py`, `logic/minimax.py`, and `logic/ai_move.py` are organized as a Python package (`logic/`) so their imports remain consistent and importable from `app.py` without path hacks.
+
 
 ![](./screenshots/screenshot_2.jpeg)
 ![](./screenshots/screenshot_4.jpeg)
